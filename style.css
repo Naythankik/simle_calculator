@@ -1,0 +1,191 @@
+/* font-family: 'League Spartan', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+.default-theme {
+  --bg: hsl(222, 26%, 31%);
+  --toggle-and-keypad-bg: hsl(223, 31%, 20%);
+  --display-bg: hsl(224, 36%, 15%);
+  --display-color: hsl(0, 0%, 100%);
+  --text-color: hsl(221, 14%, 31%);
+  --top-paragraph-color: hsl(0, 0%, 100%);
+  --delete-bg: hsl(225, 21%, 49%);
+  --delete-box-shadow: 1px 5px 1px 0px hsl(224, 28%, 35%);
+  --equal-bg: hsl(6, 63%, 50%);
+  --equal-box-shadow: 1px 5px 1px 0px hsl(6, 70%, 34%);
+  --equalTextColor: hsl(0, 0%, 100%);
+  --button-bg: hsl(30, 25%, 89%);
+  --button-box-shadow: 1px 5px 1px 0px hsl(28, 16%, 65%);
+}
+.theme-light {
+  --bg: hsl(0, 0%, 90%);
+  --toggle-and-keypad-bg: hsl(0, 5%, 81%);
+  --display-bg: hsl(0, 0%, 93%);
+  --display-color: hsl(60, 10%, 19%);
+  --text-color: hsl(221, 14%, 31%);
+  --top-paragraph-color: hsl(60, 10%, 19%);
+  --delete-bg: hsl(185, 42%, 37%);
+  --delete-box-shadow: 1px 5px 1px 0px hsl(185, 58%, 25%);
+  --equal-bg: hsl(25, 98%, 40%);
+  --equal-box-shadow: 1px 5px 1px 0px hsl(25, 99%, 27%);
+  --equalTextColor: hsl(0, 0, 100%);
+  --button-bg: hsl(45, 7%, 89%);
+  --button-box-shadow: 1px 5px 1px 0px hsl(35, 11%, 61%);
+}
+.theme-dark {
+  --bg: hsl(268, 75%, 9%);
+  --toggle-and-keypad-bg: hsl(268, 71%, 12%);
+  --display-bg: hsl(268, 71%, 12%);
+  --display-color: hsl(52, 100%, 62%);
+  --text-color: hsl(52, 100%, 62%);
+  --top-paragraph-color: hsl(52, 100%, 62%);
+  --delete-bg: hsl(281, 89%, 26%);
+  --delete-box-shadow: 1px 5px 1px 0px hsl(285, 91%, 52%);
+  --equal-bg: hsl(176, 100%, 44%);
+  --equal-box-shadow: 1px 5px 1px 0px hsl(177, 92%, 70%);
+  --equalTextColor: hsl(198, 20%, 13%);
+  --button-bg: hsl(268, 47%, 21%);
+  --button-box-shadow: 1px 5px 1px 0px hsl(290, 70%, 36%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  background: var(--bg);
+  font-family: "League Spartan", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.container {
+  padding: 10px;
+  width: 35%;
+  display: grid;
+  gap: 30px;
+}
+/* the theme container */
+div.theme {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+div.theme h1,
+div.theme p {
+  color: var(--top-paragraph-color);
+}
+div.theme p {
+  font-size: 12px;
+}
+
+div.theme-switch {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+span.span-switch {
+  width: 100%;
+  color: var(--top-paragraph-color);
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.15rem;
+}
+
+input {
+  height: 12px;
+  width: 12px;
+  appearance: none;
+  background-color: var(--equal-bg);
+  border-radius: 50%;
+  opacity: 0;
+}
+input:hover {
+  cursor: pointer;
+}
+.tri-state-toggle {
+  display: flex;
+  background: var(--toggle-and-keypad-bg);
+  justify-content: center;
+  border-radius: 50px;
+  padding: 4px 1px;
+}
+#one {
+  opacity: 1;
+}
+/* ends here */
+
+/* the display container starts here */
+div.display {
+  background: var(--display-bg);
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  height: 14vh;
+  padding: 15px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  overflow-wrap: anywhere;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+div.display p {
+  color: var(--display-color);
+  font-size: clamp(1rem, 2.5vw, 4rem);
+  /* font-size: 4rem; */
+  width: auto;
+}
+
+/* the display ends here */
+
+/* The designated buttons styling starts here */
+section {
+  background-color: var(--toggle-and-keypad-bg);
+  display: grid;
+  grid-auto-columns: 22%;
+  outline: none;
+  border: none;
+  padding: 30px 25px;
+  gap: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+.reset {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.equal {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  background-color: var(--equal-bg);
+  box-shadow: var(--equal-box-shadow);
+  color: var(--equalTextColor);
+}
+.delete,
+.reset {
+  background-color: var(--delete-bg);
+  box-shadow: var(--delete-box-shadow);
+  color: white;
+}
+section button {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  font-size: 32px;
+  text-align: center;
+  box-shadow: var(--button-box-shadow);
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  font-weight: bolder;
+  cursor: pointer;
+}
