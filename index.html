@@ -1,84 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Open+Sans&family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Frontend Mentor | Calculator app</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Open+Sans&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet" />
 
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body class="default-theme body">
-    <main>
-      <div class="container">
-        <div class="theme">
-          <h1 class="theme-title">calc</h1>
-          <div class="theme-switch">
-            <p class="theme-info">THEME</p>
-            <div class="switch">
-              <span class="span-switch">1 2 3</span>
-              <div class="tri-state-toggle">
-                <input class="button" type="radio" name="toggle" id="one" />
-                <input class="button" type="radio" name="toggle" id="two" />
-                <input class="button" type="radio" name="toggle" id="three" />
-              </div>
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="default-theme body">
+  <main>
+    <div class="container">
+      <div class="theme">
+        <h1 class="theme-title">calc</h1>
+        <div class="theme-switch">
+          <p class="theme-info">THEME</p>
+          <div class="switch">
+            <span class="span-switch">1 2 3</span>
+            <div class="tri-state-toggle">
+              <input class="button" type="radio" name="toggle" id="one" />
+              <input class="button" type="radio" name="toggle" id="two" />
+              <input class="button" type="radio" name="toggle" id="three" />
             </div>
           </div>
         </div>
-        <div class="display">
-          <p id="display-context">0</p>
-        </div>
-        <section class="calculator">
-          <button type="submit" class="keyValue">7</button>
-          <button type="submit" class="keyValue">8</button>
-          <button type="submit" class="keyValue">9</button>
-          <button type="submit" class="delete">DEL</button>
-          <button type="submit" class="keyValue">4</button>
-          <button type="submit" class="keyValue">5</button>
-          <button type="submit" class="keyValue">6</button>
-          <button type="submit" class="keyValue">+</button>
-          <button type="submit" class="keyValue">1</button>
-          <button type="submit" class="keyValue">2</button>
-          <button type="submit" class="keyValue">3</button>
-          <button type="submit" class="keyValue">-</button>
-          <button type="submit" class="keyValue">.</button>
-          <button type="submit" class="keyValue">0</button>
-          <button type="submit" class="keyValue">/</button>
-          <button type="submit" class="keyValue">x</button>
-          <button type="submit" class="reset">RESET</button>
-          <button type="submit" class="equal">=</button>
-        </section>
       </div>
-    </main>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      <div class="display">
+        <p id="display-context"></p>
+      </div>
+      <section class="calculator">
+        <button type="submit" id="first" value="7" class="keyValue">7</button>
+        <button type="submit" value="8" class="keyValue">8</button>
+        <button type="submit" value="9" class="keyValue">9</button>
+        <button type="submit" class="delete">DEL</button>
+        <button type="submit" value="4" class="keyValue">4</button>
+        <button type="submit" value="5" class="keyValue">5</button>
+        <button type="submit" value="6" class="keyValue">6</button>
+        <button type="submit" value="+" class="keyValue">+</button>
+        <button type="submit" value="1" class="keyValue">1</button>
+        <button type="submit" value="2" class="keyValue">2</button>
+        <button type="submit" value="3" class="keyValue">3</button>
+        <button type="submit" value="-" class="keyValue">-</button>
+        <button type="submit" value="." class="keyValue">.</button>
+        <button type="submit" value="0" class="keyValue">0</button>
+        <button type="submit" value="/" class="keyValue">/</button>
+        <button type="submit" value="*" class="keyValue">X</button>
+        <button type="submit" class="reset">RESET</button>
+        <button type="submit" class="equal">=</button>
+      </section>
     </div>
-  </body>
-  <script src="index.js"></script>
+  </main>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your
+      Name Here</a>.
+  </div>
+</body>
+<script src="index.js"></script>
+
 </html>
