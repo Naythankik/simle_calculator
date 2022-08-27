@@ -1,7 +1,3 @@
-/* font-family: 'League Spartan', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Poppins', sans-serif; */
-
 .default-theme {
   --bg: hsl(222, 26%, 31%);
   --toggle-and-keypad-bg: hsl(223, 31%, 20%);
@@ -150,7 +146,6 @@ div.display p {
 section {
   background-color: var(--toggle-and-keypad-bg);
   display: grid;
-  grid-auto-columns: 22%;
   outline: none;
   border: none;
   padding: 30px 25px;
@@ -173,6 +168,7 @@ section {
 .reset {
   background-color: var(--delete-bg);
   box-shadow: var(--delete-box-shadow);
+  font-size: 1rem;
   color: white;
 }
 section button {
@@ -188,4 +184,22 @@ section button {
   color: var(--text-color);
   font-weight: bolder;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 650px) {
+  div.container {
+    width: 100%;
+    gap: 10px;
+    /* padding: 10px; */
+  }
+  section {
+    padding: 25px 10px;
+    gap: 15px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  body {
+    display: none;
+  }
 }

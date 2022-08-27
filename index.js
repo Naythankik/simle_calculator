@@ -10,7 +10,9 @@ window.onload = () => {
 
 calc.addEventListener("click", (e) => {
   const filler = () => {
-    display.textContent += e.target.value;
+    if (e.target.value != undefined) {
+      display.textContent += e.target.value;
+    }
   };
 
   filler();
@@ -27,23 +29,6 @@ calc.addEventListener("click", (e) => {
       display.textContent.length - 1
     );
   }
-
-  // if (e.target.classList !== 'keyValue' && e.target.textContent === '=') {
-
-  //   let x = display.textContent;
-  //   let y = eval(x)
-  //   display.textContent = y;
-
-  // } else if (e.target.classList === 'reset' && e.target.textContent === 'reset') {
-
-  //   display.textContent = 0
-
-  // } else if (e.target.classList !== 'reset' || e.target.classList !== 'equal' || e.target.classList !== 'delete') {
-  //   function filler() {
-  //     display.textContent += e.target.textContent
-  //   }
-  //   filler()
-  // }
 });
 
 let buttons = document.getElementsByClassName("button");
